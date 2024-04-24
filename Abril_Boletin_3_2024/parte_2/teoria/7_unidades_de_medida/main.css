@@ -1,0 +1,16 @@
+html {
+    font-size: 62.5%; /* esto sirve para cambiar el valor por defecto de 1 rem que es de 16px a 10px. ( 16px * 62,5 / 100 = 10px ) */
+}
+
+p {
+    font-size: 2rem; /* entonces ahora si hacemos referencia a 2rem tendremos 20px (ya que 1rem es igual 10px) */
+}
+
+/*
+    Cuando usamos numeros, y hacemos referencia al valor 0 (cero) no es necesario aclarar la unidad de medida,
+    ya que no importa que unidad de medida se use, el valor siempre será el mismo.
+    Ej:
+    - si digo que la distancia es de 0 mts (metros).
+    - es lo mismo que diga que la distancia de 0 cms (centimetros).
+    - es por esta razon logica, que el valor 0 "unidades" es equivalente en todas las unidades de medicion.
+*/

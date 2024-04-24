@@ -1,0 +1,14 @@
+/*
+    Pista: debes usar el <link> y hacer que cargue este archivo llamado "main.css"
+*/
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    color: blue;
+}

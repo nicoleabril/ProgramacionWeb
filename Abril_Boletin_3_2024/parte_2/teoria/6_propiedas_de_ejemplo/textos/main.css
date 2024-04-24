@@ -1,0 +1,61 @@
+/* Font Style */
+
+.normal {
+    font-style: normal;
+}
+
+.italica {
+    font-style: italic;
+}
+
+/* Font Weight */
+.negrita {
+    font-weight: bold;
+}
+
+.normal {
+    font-weight: normal;
+}
+
+/* Font Size */
+.texto-grande {
+    font-size: 20px; /* Unidad de medida absoluta: px */
+}
+
+.texto-relativo {
+    font-size: 200%; /* Unidad de medida relativa: % em rem */ 
+}
+
+/* Font Family */
+.impact {
+    font-family: Impact, sans-serif;
+}
+
+.comicSans{
+    font-family: "Comic Sans MS", sans-serif;
+}
+
+/* Text Align */
+.centrar {
+    text-align: center;
+}
+
+.a-la-derecha {
+    text-align: right;
+}
+
+/* Text: line-height */
+.interlineado {
+    line-height: 1.6;
+}
+
+/* Text Decoration */
+.subrayado {
+    text-decoration: none;
+}
+
+.tachado {
+    text-decoration: line-through;
+}
+
+

@@ -1,0 +1,8 @@
+.fondoFuerte {
+    background-color: yellow;
+}
+  
+.paper {
+     background-image:  url("https://www.w3schools.com/cssref/paper.gif");
+     background-repeat: repeat-x;
+}

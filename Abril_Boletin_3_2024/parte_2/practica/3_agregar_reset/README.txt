@@ -1,0 +1,1 @@
+- Agregar un reset para el estilo css del html

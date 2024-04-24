@@ -1,0 +1,42 @@
+/*
+  ¿Cómo agregamos colores a estos items?
+  la idea es que quede una lista de color rojo y otra lista de color azul.
+
+  Este ejercicio esta resuelto, como veras se puede resolver de varias formas.
+  Podes ver las formas de resolverlo comentando o descomentando las secciones 
+  (recorda que no deben estar descomentadas ambas al mismo tiempo, solo una a la vez, asi veras el resultado)
+*/
+
+
+/*
+  Malas practicas
+*/
+/*
+.rojo {
+  color: red;
+}
+
+.azul {
+  color: blue;
+}
+*/
+
+
+/*
+  Buenas practicas
+*/
+
+ul li {
+    color: red;
+}
+  
+  ol li {
+    color: blue;
+}
+
+/*
+    La razon por la que esta ultima opcion es una mejor practica es porque estamos manteniendo
+    "el selector de especificad" lo mas bajo posible, podes ver mas sobre esto en: https://www.w3schools.com/css/css_specificity.asp
+*/
+  
+  

@@ -1,0 +1,24 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+p {
+    text-decoration: underline;
+}
+
+/* Clases para los colores */
+.texto-gris {
+    color: gray;
+}
+
+.texto-amarillo {
+    color: yellow;
+}
+
+.texto-azul {
+    color: blue;
+}

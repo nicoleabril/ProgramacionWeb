@@ -1,0 +1,59 @@
+/*
+    Si quiero cambiar los estilos del index.html
+    puedo hacerlo usando diferentes selectores
+*/
+
+/* Se puede cambiar usando el <div> */
+div {
+    background-color: cyan;
+}
+
+/*
+    ¿Que valor tendra el div?
+    Cascada: el codigo es leido de arriba hacia abajo y de izquierda a derecha.
+*/
+.container {
+    background-color: gray;
+}
+
+.class {
+
+}
+
+.otra-clase {
+
+}
+
+/* Tambien se puede cambiar usando el .container */
+#main-container {
+    background-color: yellowgreen;
+}
+
+/* Tambien se puede cambiar usando el .container */
+
+
+/*
+    Si aplicamos todos estos estilos, se aplicara el que tenga MAYOR precedencia,
+    esto lo tendra siempre el selector con mayor ESPECIFICIDAD.
+    Un codigo con alta especificidad es complejo de mantener, por lo tanto,
+    trataremos de tener codigo con la menor especificidad posible (siempre que sea posible).
+*/
+
+/*
+    Que pasa si le aplicamos el color azul al <div>
+    Herencia: el color es heredado a sus hijos. Por eso es clave,
+    entender el funcionamiento de padres e hijos.
+*/
+div {
+    /*
+    color: blue;
+    */
+}
+
+/*
+    Si queremos aplicar estilos al parrafo que tiene un ID con el valor "parrafo-principal", ¿como deberiamos hacer?
+*/
+
+/*
+    Si queremos aplicar estilos al parrafo que tiene un ID con el valor "parrafo-secundario", ¿como deberiamos hacer?
+*/

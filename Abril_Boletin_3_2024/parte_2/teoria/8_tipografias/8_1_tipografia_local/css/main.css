@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "Mistery Quest";
+    src: url("MysteryQuest-Regular");
+}
+
+* {
+    font-family: "Mistery Quest", cursive;
+}

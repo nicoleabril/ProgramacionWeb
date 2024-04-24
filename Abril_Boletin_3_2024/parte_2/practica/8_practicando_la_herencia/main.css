@@ -1,0 +1,25 @@
+div {
+    color: blue;
+}
+  
+p {
+    color: red;
+}
+  
+p {
+    color: green;
+}
+
+/*
+    Pregunta 1: ¿Qué color tendra el parrafo si se aplica este archivo CSS asi como esta?
+    El párrafo tendrá color verde así como está.
+    Pregunta 2: ¿Por qué?
+    Porque la hoja de estilos se carga de arriba hacia abajo, por lo que primero
+    detectará que el div tiene color azul, pero ya que el elemento p es hijo entonces el texto heredará el 
+    color colocado y como existe doble estilo del elemento p entonces se cargará el último color leído.
+    Pregunta 3: ¿Que color tendrá el parrafo si se eliminan o comentan desde la linea 5 hasta la 11 de este archivo?
+    Si se eliminan esas líneas entonces el elemento tendrá el color de su elemento padre div, en este caso el texto
+    será de color azul.
+
+    Si queres una pista podes linkear este archivo CSS al index.html
+*/

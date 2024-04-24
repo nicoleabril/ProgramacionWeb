@@ -1,0 +1,28 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos personalizados */
+body {
+    font-family: "Arial", sans-serif; /* Cambia "Arial" por la fuente que desees utilizar */
+}
+
+p {
+    text-decoration: underline;
+}
+
+/* Clases para los colores */
+.texto-gris {
+    color: gray;
+}
+
+.texto-amarillo {
+    color: yellow;
+}
+
+.texto-azul {
+    color: blue;
+}

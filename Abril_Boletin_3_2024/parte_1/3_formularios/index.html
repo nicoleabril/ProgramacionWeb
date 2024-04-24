@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer formulario</title>
+</head>
+<body>
+    <h2>Formulario</h2>
+    <form action="#" method="GET" enctype="application/x-www-form-urlencoded">
+        <fieldset>
+            <legend>Formulario de contacto</legend>
+
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" name="nombre" id="nombre"><br>
+
+        <label for="apellido">Apellido:</label><br>
+        <input type="text" name="apellido" id="apellido"><br>
+
+        <label for="numero">Numero:</label><br>
+        <input type="number" name="numero"><br>
+
+        <label for="url">Url:</label><br>
+        <input type="url" name="url"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" name="email" id="email"><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" name="password" id="password"><br>
+
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea><br>
+
+        <div>Turno diurno</div>
+        <input type="radio" name="turno" value="diurno" /><br>
+
+        <div>Turno nocturno</div>
+        <input type="radio" name="turno" value="nocturno" /><br>
+
+        <select name="talles">
+            <option value="L">Large</option>
+            <option value="M">Medium</option>
+            <option value="S">Small</option>
+        </select><br>
+
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I have a boat</label><br><br>
+
+        <input type="submit" value="Enviar"/>
+        <input type="reset" value="Limpiar formulario"/>
+
+
+            
+          
+        </fieldset>
+    
+    </form>
+</body>
+</html>

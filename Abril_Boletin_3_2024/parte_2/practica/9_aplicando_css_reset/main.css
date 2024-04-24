@@ -1,0 +1,15 @@
+/*
+    Aquí deberas escribir codigo para aplicar el reset CSS
+*/
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+ }
+
+/*
+    Una vez aplicado el reset, aplica un 40 pixeles (px) de margen a la izquierda (margin-left) a los items (li) de la lista (ul)
+*/
+ul li {
+    margin-left: 40px;
+}

@@ -1,0 +1,83 @@
+/*
+    En los archivos CSS la forma de hacer comentarios es usando: 
+    / * (para la apertura -> sin espacios)
+    * / (para el cierre -> sin espacios)
+*/
+
+/*
+    Sintaxis:
+    selector {
+        propiedad: valor;
+        otrapropiedad: otrovalor;
+    }
+
+    En este punto es importante entender que en el "selector" nos vamos a encontrar con:
+    1) etiquetas HTML: div, h1, h2, h3, p, img, y cualquier otra etiqueta que forme parte del HTML.
+    
+    2) class: las clases son atributos que van dentro de las etiquetas html, estas pueden
+    tener un valor o varios valores.
+    2.1) Ejemplo de class con un valor: <div class="container"> ... aca va el contenido ... </div>
+    2.2.) Ejemplo de class con varios valores: <div class="container fondo-rojo"> ... aca va el contenido ... </div>
+    
+    3) id: los ids son atributos que van dentro de las etiquetas html, estas pueden
+    tener un unico valor, es decir, por documento html no se pueden repetir los valores.
+    3.1) Ejemplo de id: <div id="main"> ... aca va el contenido ... </div>
+
+    */
+
+    
+    header {
+        color: blue; /* asigna el color azul, como se encuentra dentro del header se aplica a ese elemento html */
+    }
+
+    ul {
+        list-style-type: square; /* Hace que el style type sea un cuadrado */
+        /* Que pasa cuando ponemos varias veces el mismo estilo pero con un valor diferente? */
+    }
+
+    ol {
+        list-style-type: upper-alpha; /* Hace que el style type sea un circulo letras en mayuscula */
+        list-style-type: upper-latin; /* Hace que el style type sea un circulo letras en mayuscula */
+        list-style-type: upper-roman; /* Hace que el style type sea un circulo numero romano en mayuscula */
+        
+        list-style-type: lower-alpha; /* Hace que el style type sea un circulo letras en minuscula */
+        list-style-type: lower-latin; /* Hace que el style type sea un circulo letras en minuscula */
+        list-style-type: lower-roman; /* Hace que el style type sea un circulo numero romano en minuscula */
+        /* Que pasa cuando ponemos varias veces el mismo estilo pero con un valor diferente? */
+    }
+
+    ul li {
+        background: #cce5ff; /* Agregar un fondo de color: #cce5ff */
+        color: darkblue; /* Agrega un fondo de color: azul oscuro */
+        margin: 5px; /* Agrega margen en todas las direcciones (arriba, derecha, abajo, izquiera) en 5 pixeles */
+    }
+
+    /* En algunas situaciones queremos afectar a un caso
+    especifico, como puede ser el primer o ultimo vez que
+    se detecta ese elemento HTML, una de las mejores formas
+    de hacerlo es a traves del uso del operador ":" que
+    es seguido de ciertas palabras reservadas del lenguaje CSS */
+    section:first-child {
+        color:chartreuse;
+    }
+
+    section:last-child {
+        color:darkgreen;
+    }
+
+    h1 {
+        /* Si quisiera agregar el color rojo que deberiamos hacer? */
+    }
+
+    h3 {
+        /* Si quisiera agregar el color #C3C3C3 que deberiamos hacer? */
+    }
+
+    img {
+        /* Si quisiera agregar un ancho (width) de 200 pixeles y un alto (height) 250 pixeles que deberia hacer? */
+    }
+
+    footer ul li {
+        background: darkcyan; /* Agregar un fondo de color: darkcyan */
+        color: darkgrey; /* Agrega un color: darkgrey */
+    }
