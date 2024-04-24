@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f6f6fe;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.contenedor {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contenedor__cards {
+  margin: 70px 0;
+}
+
+.card {
+  background-color: #fff; /* Color de fondo: blanco */
+  border-radius: 15px; /* Bordes de la tarjeta redondeados */
+  padding: 20px; /* Distanciamiento interior en todos los lados de 20px */
+  display: flex; /* Se habilita la funcionalidad FLEX eso permite que los hijos los podamos mover, ej: la imagen a la izquierda y el texto a la derecha */
+  align-items: center; /* Alineación vertical centrada */
+  position: relative; /* Se habilita la funcionalidad relativa, esto permite que los hijos puedan moverse (lo veremos en el boton). */
+  margin-bottom: 50px; /* Distanciamiento exterior en la parte de abajo. */
+}
+
+.card__thumbnail {
+  width: 650px; /* Defino un ancho en px. */
+  height: 200px; /* Defino un alto en px. */
+  margin-right: 20px; /* Defino un distanciamiento exterior de 20 px sólo del lado derecho. */
+  border-radius: 10px; /* Bordes redondeados de forma sútil. */
+  overflow: hidden; /* Hago que el contenido no se sobresalga de los limites. */
+  display: inline-block; /* Se aplica al <a> si solo aplicamos el block ocuparia el 100% del ancho disponible. */
+}
+
+.card__img {
+  width: 100%;
+}
+
+.card__titulo {
+  font-family: "Raleway", sans-serif; /* Tipo de tipografia de Google Fonts */
+  font-size: 30px; /* Tamaño de la fuente*/
+  font-weight: normal; /* Tipo de letra normal */
+  margin-bottom: 20px; /* Distanciamiento exterior en la parte de abajo de 20px. */
+}
+
+.card__enlace {
+  color: #000; /* Cambia el color de la letra a negro. */
+}
+
+.card__extracto {
+  line-height: 28px; /* Altura de linea de 28px. */
+  color: #6d6d6d; /* Defino el color de la fuente. */
+  margin-bottom: 20px; /*Defino un distanciamiento exterior en la parte de abajo. */
+}
+
+.boton {
+  border: none; /* Se quitan los bordes del boton. */
+  min-width: 180px; /* Se define un ancho mínimo. */
+  height: 50px; /* Se define la altura. */
+  padding: 0 30px; /* Distanciamiento interior: arriba y abajo de 0px y lados de 30px. */
+  background: #000; /* Color de fondo negro. */
+  color: #fff; /* Texto color blanco. */
+  display: inline-block; /* De esta forma el padding entra en funcionamiento. */
+  border-radius: 100px; /* Esquinas redondeadas */
+  display: inline-flex; /* Permite que podamos mover de izq a der a los hijos. */
+  justify-content: space-between; /* Con esto ponemos el icono a la derecha y el texto a la izquierda. */
+  align-items: center; /* Centramos los elementos de forma vertical. */
+  background: #406cc2; /* Se define color del fondo. */
+}
+
+.boton:hover {
+  background: #1b1881; /* Se define color del fondo al pasar el mouse. */
+  text-decoration: none; /* Se quita el subrayado del link. */
+}
+
+
+.boton--rojo {
+  background: red; /* Se define color del fondo. */
+}
+
+.boton--rojo:hover {
+  background: orange; /* Se define color del fondo al pasar el mouse. */
+  text-decoration: none; /* Se quita el subrayado del link. */
+}
+
+.boton--absolute {
+  position: absolute; /* Se define tipo de posicion del elemento como absoluta. */
+  right: 20px; /* Se indica mover a la derecha 20px. */
+  bottom: -25px; /* Se indica mover por debajo 25px. */
+}
+
+.boton--verde {
+  background: #7ba771; /* Se define color del fondo. */
+}
+
+
+
+.boton--verde:hover {
+  background: #437837; /* Se define color del fondo al pasar el mouse. */
+}
+
+.frase {
+  text-align: center; /* Se alinean el contenido centrado. */
+  margin: 70px 0; /* Distanciamiento arriba y abajo de 70 y a los lados de 0. */
+}
+
+.frase__texto {
+  margin-bottom: 20px; /* Distanciamiento inferior externo de 20px. */
+  font-size: 30px; /* Tamaño de la letra. */
+  font-family: "Raleway", sans-serif; /* Tipografia */
+  font-weight: 600; /* En "negrita", se carga la variante de trazo grueso. */
+  font-style: italic; /* Con italica. */
+}

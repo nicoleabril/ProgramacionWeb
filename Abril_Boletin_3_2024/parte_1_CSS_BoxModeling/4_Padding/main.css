@@ -1,0 +1,48 @@
+/* 
+    Las siguientes instrucciones son para dibujar un borde y color de relleno
+    para facilitar la comprensión de cada uno de los casos!
+*/
+
+.bordes_y_fondo_coloreado {
+    border: 1px solid blue;
+    background-color: cyan;
+}
+
+/*
+    Ahora sí, a partir de aquí el codigo es para escribir padding de diferentes formas
+*/
+
+/* Detallada */
+div {
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 12px;
+    padding-left: 15px;
+}
+
+/* 
+    Abreviada 1: 
+    la usamos solo para escribir todo en una linea.
+*/
+div {
+    padding: 5px 10px 12px 15px; /* Equivale a la opción detallada */
+}
+
+
+/* 
+    Abreviada 2: 
+    la usamos solo cuando queremos aplicar la misma cantidad de padding en los ejes
+    vertical (Y) como horizontal (X).
+*/
+div {
+    padding: 10px 20px; /* equivale a padding-top: 10px; padding-bottom: 10px; padding-right: 20px; padding-left: 20px; */
+}
+
+/* 
+    Abreviada 3: 
+    la usamos solo cuando queremos aplicar la misma cantidad de padding 
+    a todos los lados.
+*/
+div {
+    padding: 30px; /* equivale a padding-top: 30px; padding-bottom: 30px; padding-right: 30px; padding-left: 30px; */
+}

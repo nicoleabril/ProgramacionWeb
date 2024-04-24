@@ -1,0 +1,28 @@
+.hijo { /* un solo hijo */
+  /* --- probando propiedades --- */
+  justify-self: center; /* start | end | center | stretch */
+  align-self: start; /* start | end | center | stretch */
+  /* --- */
+  
+}
+
+#padre div { /* cada hijo */
+
+  border: solid 1px;
+  background-color: yellow;
+  font-size: 21px;
+  padding: 5px;
+}
+
+#padre {  
+  display: grid;
+  width: 500px;
+  height: 300px;
+  border: dotted 1px red;
+  grid-template-columns: auto auto;
+  grid-column-gap: 10px;
+  grid-template-rows: auto auto;
+  grid-row-gap: 10px;
+  
+}
+

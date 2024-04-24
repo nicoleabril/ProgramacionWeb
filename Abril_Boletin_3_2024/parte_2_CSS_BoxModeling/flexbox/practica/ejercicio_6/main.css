@@ -1,0 +1,49 @@
+* {
+  box-sizing: content-box;
+}
+
+/* Clases de colores */
+.azul {
+  background: blue;
+}
+
+.rojo {
+  background: red;
+}
+
+.negro {
+  background: black;
+}
+
+.container {
+  margin: 30px 0px;
+}
+
+.borde {
+  border: solid 2px;
+}
+
+.cuadrado {
+  margin: 10px 10px;
+  color: white;
+  width: 150px;
+  height: 100px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.order-3 {
+  order: -1;
+}
+
+.order-2 {
+  order: -2;
+}
+
+.order-1 {
+  order: -3;
+} 

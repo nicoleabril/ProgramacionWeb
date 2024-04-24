@@ -1,0 +1,43 @@
+/*
+    Este es tu grid container
+    agrega el codigo necesario dentro del <ul>
+    para hacer 4 columnas flexibles
+*/
+
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+
+}
+
+/*
+    Este fragmento de código lo unico que hace es agregas estilos visuales
+    para poder hacer que quede mejor esteticamente
+*/
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #F6F3EA;
+    font-family: Avenir, Heveltica, Arial, san-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+li {
+    padding: 1em;
+    background: #F9423A;
+}
+
+
+/*
+Solución 1:
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+
+Solución 2:
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  grid-gap: 1rem;
+*/

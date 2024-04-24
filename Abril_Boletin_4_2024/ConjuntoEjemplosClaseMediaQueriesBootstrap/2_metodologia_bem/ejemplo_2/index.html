@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Metodología BEM
+    </title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:ital,wght@0,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- Metodologia BEM: usa Bloque, Elemento y Modificadores -->
+    <!-- Más información en: http://getbem.com/ -->
+    <!-- Más información en: https://9elements.com/bem-cheat-sheet/ -->
+
+    <div class="contenedor">
+      <!-- Bloque -->
+
+      <div class="contenedor__cards">
+        <div class="card">
+          <!-- Bloque -->
+
+          <a class="card__thumbnail" href="#">
+            <img class="card__img" src="./img/1.jpg" alt="" />
+          </a>
+
+          <div class="card__textos">
+            <h3 class="card__titulo">
+              hola mundo
+            </h3>
+            <p class="card__extracto">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Praesentium, eum obcaecati pariatur repellat libero quidem
+              assumenda doloremque animi veritatis ad similique exercitationem.
+              Debitis quo excepturi possimus corrupti blanditiis perspiciatis
+              cumque.
+            </p>
+            <a class="boton" role="button" href="#">
+              <span class="boton_texto">
+                Ver más
+              </span>
+              <i class="boton__icono fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <!-- Bloque -->
+
+          <a class="card__thumbnail" href="#">
+            <img class="card__img" src="./img/2.jpg" alt="" />
+          </a>
+
+          <div class="card__textos">
+            <h3 class="card__titulo">
+              <a class="card__enlace" href="#">Lorem ipsum dolor sit amet</a>
+            </h3>
+            <p class="card__extracto">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Praesentium, eum obcaecati pariatur repellat libero quidem
+              assumenda doloremque animi veritatis ad similique exercitationem.
+              Debitis quo excepturi possimus corrupti blanditiis perspiciatis
+              cumque.
+            </p>
+            <a class="boton boton--absolute" role="button" href="#">
+              <span class="boton_texto">
+                Ver más
+              </span>
+              <i class="boton__icono fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contenedor__frases">
+        <div class="frase">
+          <h2 class="frase__texto">
+            Lo más díficil en programación es el uso correcto del cache y
+            ponerle nombre a las cosas!
+          </h2>
+          <a class="boton boton--verde" role="button" href="#">
+            <span class="boton__texto">
+              Comprar
+            </span>
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+      El siguiente JS sirve para usar los iconos como la flechita y carrito que aparece en cada boton
+      La forma en que se usa es a traves de clases, la documentacion se puede leer en https://fontawesome.com/docs/web/
+     -->
+    <script
+      src="https://kit.fontawesome.com/2c36e9b7b1.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

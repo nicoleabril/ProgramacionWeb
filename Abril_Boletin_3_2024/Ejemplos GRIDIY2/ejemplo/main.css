@@ -1,0 +1,39 @@
+#container > div {
+    display: flex;
+    font-family: "Courier New", "Lucida Console", monospace;
+  }
+  
+  #container > div > div {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(-45deg, #788cff, #b4c8ff);
+  }
+  
+  .flex-start {
+    justify-content: flex-start;
+  }
+  
+  .center {
+    justify-content: center;
+  }
+  
+  .flex-end {
+    justify-content: flex-end;
+  }
+  
+  .space-between {
+    justify-content: space-between;
+  }
+  
+  .space-around {
+    justify-content: space-around;
+  }
+
+  .space-evenly {
+    justify-content: space-around;
+  }
+
+  .with-borders {
+    border: 1px red dotted;
+  }
+  

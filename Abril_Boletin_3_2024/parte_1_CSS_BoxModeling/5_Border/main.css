@@ -1,0 +1,64 @@
+/* 
+    Las siguientes instrucciones son para dibujar color de relleno
+    y facilitar la comprensión de cada uno de los casos!
+*/
+
+.fondo_coloreado {
+    background-color: cyan;
+}
+
+/*
+    Ahora sí, a partir de aquí el codigo es para escribir padding de diferentes formas
+*/
+
+
+/* Detallada 1 */
+div {
+    border-width: 10px;
+    border-color: black;
+    border-style: dotted;
+}
+
+/* Detallada 2 */
+div {
+    /* Top */
+    border-top-width: 2px;
+    border-top-color: blue;
+    border-top-style: dotted;
+
+    /* bottom */
+    border-bottom-width: 3px;
+    border-bottom-color: black;
+    border-bottom-style: groove;
+    
+    /* Left */
+    border-left-width: 4px;
+    border-left-color: green;
+    border-left-style: double;
+
+    /* Right */
+    border-right-width: 5px;
+    border-right-color: orange;
+    border-right-style: dashed;
+
+}
+
+/* 
+    Abreviada: 
+    la usamos solo para escribir todo en una linea.
+*/
+.div {
+    border: 1px solid blue; /* Equivale a la opción detallada */
+}
+
+/* 
+    Abreviada 2: 
+    la usamos para escribir de forma abreviada cada uno de los lados en los que se mostrara
+    el borde.
+*/
+.div {
+    border-top: 1px solid blue;
+    border-bottom: 2px dotted red;
+    border-left: 3px dashed green;
+    border-right: 4px double black;
+}

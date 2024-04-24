@@ -1,0 +1,44 @@
+/*
+	Asi definimos variables en CSS usando el root.
+	Una variable es un espacio de memoria donde guardamos algun dato.
+	Aca se declaran de forma global.
+*/
+
+:root {
+	--rojo: red;
+	--azul: blue;
+	--negro: black;
+	--blanco: white;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+div {
+	width: 150px;
+	height: 150px;
+	color: var(--blanco);
+}
+
+/*
+	Agregar top, bottom, left, right. Position: relative, absolute;
+*/
+
+.caja-1-roja {
+	background: var(--rojo);
+	
+}
+
+.caja-2-azul {
+	--blanco: red; /* Aca estoy declarando una var de forma local (scope). */
+	background: var(--azul); /* reemplazar azul por blanco, se vera rojo porque es el ultimo valor de la variable */
+	position: relative;
+	top: 20px;
+	left: 200px;
+}
+
+.caja-3-negra {
+	background: var(--negro);
+}

@@ -1,0 +1,67 @@
+.miestilo {
+    background-color: green;
+    text-align: center;
+}
+
+/*
+@media (max-width: 480px) {
+    .miestilo {
+        background-color: red;
+    }
+}
+*/
+
+/*
+@media (min-width: 992px) {
+    .miestilo {
+        text-align: left;
+    }
+}
+*/
+
+/* Se puede usar un ancho mínimo, ej: */
+/*
+@media (min-width: 600px) {
+    div.example {
+        font-size: 60px;
+    }
+}
+*/
+
+/* Se puede usar un ancho máximo, ej: */
+/*
+@media (max-width: 599px) {
+    div.example {
+        font-size: 30px;
+    }
+}
+*/
+
+/*
+    Si bien podemos poner las media queries
+    que necesitemos, lo recomendable es poner todo
+    lo de la misma "medida" de breakpoint junto
+    asi se mantiene el codigo más ordenado
+*/
+/* Tambien se pueden combinar condiciones con el operandor AND */
+
+/*
+@media (min-width: 400px) and (max-width: 700px) {
+    .miestilo {
+        text-align: left;
+    }
+}
+*/
+
+/*
+    Tambien vamos a poder identificar cual es la orientación
+    del device, que podrá ser landscape o portrait
+*/
+
+/*
+@media (min-width: 700px) and (orientation: landscape) {
+    .miestilo {
+        text-align: left;
+    }
+}
+*/

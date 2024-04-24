@@ -1,0 +1,48 @@
+/* 
+    Las siguientes instrucciones son para dibujar un borde y color de relleno
+    para facilitar la comprensión de cada uno de los casos!
+*/
+
+.bordes_y_fondo_coloreado {
+    border: 1px solid blue;
+    background-color: cyan;
+}
+
+/*
+    Ahora sí, a partir de aquí el codigo es para escribir margin de diferentes formas
+*/
+
+/* Detallada */
+div {
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 12px;
+    margin-left: 15px;
+}
+
+/* 
+    Abreviada 1: 
+    la usamos solo para escribir todo en una linea.
+*/
+div {
+    margin: 5px 10px 12px 15px; /* Equivale a la opción detallada */
+}
+
+
+/* 
+    Abreviada 2: 
+    la usamos solo cuando queremos aplicar la misma cantidad de margin en los ejes
+    vertical (Y) como horizontal (X).
+*/
+div {
+    margin: 10px 20px; /* equivale a margin-top: 10px; margin-bottom: 10px; margin-right: 20px; margin-left: 20px; */
+}
+
+/* 
+    Abreviada 3: 
+    la usamos solo cuando queremos aplicar la misma cantidad de margin 
+    a todos los lados.
+*/
+div {
+    margin: 30px; /* equivale a margin-top: 30px; margin-bottom: 30px; margin-right: 30px; margin-left: 30px; */
+}

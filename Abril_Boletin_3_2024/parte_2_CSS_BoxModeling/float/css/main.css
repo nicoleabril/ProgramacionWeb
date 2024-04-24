@@ -1,0 +1,17 @@
+img {
+  width: 170px;
+  height: 170px;
+  margin-left: 15px;
+}
+
+.imagen-1 {
+  float: left;
+}
+
+.imagen-2 {
+  float: right;
+}
+
+.float {
+  float: left;
+}

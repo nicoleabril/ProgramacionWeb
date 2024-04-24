@@ -1,0 +1,54 @@
+ul {    
+    list-style:none;
+    font-size: 0;
+    /* IMPORTANTE */
+    padding: 0;
+  }
+  
+  li {
+    display: inline-block;
+    width: 20%;
+  
+     /* IMPORTANTE */
+     position:relative;
+  }
+  a {
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    color: white;
+    background-color: SkyBlue;
+    padding: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: sans-serif;
+  }
+  a:hover {
+    background-color: RoyalBlue;
+  }
+  
+  ul ul { /* si un ul es padre de otro ul entonces... esto seria el submenu */
+    width: 100%;
+     /* IMPORTANTE */
+     position: absolute;
+     display: none; 
+  }
+  ul ul li { /* los LI dentro del submenu, esta propiedad logra que ocupe todo lo que pueda */
+    width: 100%;
+  }
+  
+  /* Al pasar sobre los LI, si tiene un UL, se MOSTRARA */
+  ul li:hover ul {
+     display:block;
+  }
+  
+  ul li:hover ul a:hover {
+    background-color: RoyalBlue;
+  }
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,16 @@
+.grid {
+  display: grid;
+  justify-items: stretch;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  grid-template-rows: auto auto;
+  height: 600px;
+  align-items: stretch;
+}
+
+.grid div {
+  border: solid 1px;
+  font-size: 21px;
+  padding: 5px;
+  background-color: gray;
+}

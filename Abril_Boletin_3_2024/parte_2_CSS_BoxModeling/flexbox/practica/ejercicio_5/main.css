@@ -1,0 +1,63 @@
+* {
+  box-sizing: content-box;
+}
+
+/* Clases de colores */
+.azul {
+  background: blue;
+}
+
+.rojo {
+  background: red;
+}
+
+.negro {
+  background: black;
+}
+
+.container {
+  margin: 30px 0px;
+}
+
+.borde {
+  border: solid 2px;
+}
+
+.cuadrado {
+  margin: 10px 10px;
+  color: white;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+/*
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+*/
+
+/*
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+*/

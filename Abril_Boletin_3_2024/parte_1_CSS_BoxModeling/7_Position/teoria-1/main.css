@@ -1,0 +1,28 @@
+div {
+	width: 200px;
+	height: 200px;
+	display: inline-block; /* Cambiar a block, inline y dejar en inline-block */
+	text-align: center;
+}
+
+.red {
+ background: red
+}
+
+.blue-normal {
+	background: darkblue;
+}
+
+.blue-hidden {
+	background: darkblue;
+	visibility:hidden;
+}
+
+.blue-none {
+	background: darkblue;
+	display: none;
+}
+
+.yellow {
+	background: yellow;
+}

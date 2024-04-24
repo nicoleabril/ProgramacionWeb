@@ -1,0 +1,18 @@
+.noticia {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: darkslategray;
+    background: lightgray;
+}
+
+.noticia__titulo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+}
+
+.noticia--destacada{
+    background-color: cornsilk;
+}
+
+.noticia__titulo--uppercase{
+    text-transform: uppercase;
+}

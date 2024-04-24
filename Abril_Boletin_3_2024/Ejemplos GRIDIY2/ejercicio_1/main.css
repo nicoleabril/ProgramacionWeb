@@ -1,0 +1,31 @@
+.container {
+  width: 100%;
+  height: 200px;
+  color: white;
+}
+
+.borde {
+  border: solid 5px black;
+}
+
+.borde-suave {
+  border: solid 1px white;
+}
+
+.azul {
+  background: blue;
+}
+
+.grid {
+  display: grid;
+  /*grid-template-columns: repeat(4, 1fr); /*   */
+  /*grid-template-rows: 1fr 1fr 1fr 1fr;*/
+  
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  
+}
+
+.item {
+  text-align: center;
+}

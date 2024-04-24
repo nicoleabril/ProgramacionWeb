@@ -1,0 +1,23 @@
+div {
+    background-color: beige;
+    
+    width: 400px;
+    height: 250px;
+}
+
+
+
+div {
+    border: solid 1px black;
+    padding: 5px;
+    display: inline-block;
+    font-size: 32px;
+    font-family: Arial, sans-serif;
+    width: 100px;
+    height: 110px;
+    overflow: hidden;
+}
+
+/*
+overflow: hidden;
+*/
