@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia Clínica</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        
+        <nav class="menu">
+            <h1>Historia Clínica</h1>
+            <label class="burger_label" for="burger_menu"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="burger" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+              </svg>
+            </label>
+            <input class="burger_menu" type="checkbox" id="burger_menu">
+            <ul class="links dropdown-menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contactos</a></li>
+            </ul>            
+        </nav>
+    </header>
+    <main>
+        <section id="personal-info">
+            <h2>Datos Personales</h2>
+                <form id="personal-info-form">
+                    <div class="datos">
+                        <div class="foto">
+                            <label for="foto">Foto:</label>
+                            <input type="file" id="foto" name="foto" accept="image/*" required>
+                            <img id="foto-preview" src="#" alt="Foto de Perfil">
+                        </div>
+                        <div class="info">
+                            <div>
+                                <label for="cedula">Cedula:</label>
+                                <input type="text" id="cedula" name="cedula" required>
+                        
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                        
+                                <label for="direccion">Dirección:</label>
+                                <input type="text" id="direccion" name="direccion" required>
+                        
+                                <label for="telefono">Teléfono:</label>
+                                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{7}" required>
+                            </div>
+                            <div>
+                                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                                <input type="datetime-local" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                        
+                                <label for="pais">País:</label>
+                                <select id="pais">
+                                    <option value="">Seleccione un país</option>
+                                </select>
+
+                                <label for="estado">Estado o Provincia:</label>
+                                <select id="estado">
+                                    <option value="">Seleccione un estado</option>
+                                </select>
+                        
+                                <label for="ciudad">Ciudad:</label>
+                                <select id="ciudad" name="ciudad">
+                                    <option value="">Seleccione una ciudad</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="boton-consultas-container">
+                        <button class="botonConsultas" type="submit">Consultar</button>
+                    </div>
+                    
+                </form>
+        </section>
+        <section id="edad">
+            <h2>Edad Exacta</h2>
+            <div id="edad-info">
+                <!-- La edad calculada se mostrará aquí -->
+            </div>
+        </section>
+        <section id="consultas">
+            <h2>Consultas</h2>
+            <table id="consultas-table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas de consultas dinámicas aquí -->
+                </tbody>
+            </table>
+        </section>
+        <section id="hijos">
+            <div class="hijos-header">
+                <h2>Hijos del Paciente</h2>
+                <button id="agregar-hijo" data-toggle="tooltip" title="Agregar hijo">
+                    Agregar Hijo <i class="fas fa-plus"></i>
+                </button>
+            </div>
+            <table id="hijos-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas de hijos dinámicas aquí -->
+                </tbody>
+            </table>
+            
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Historia Clínica. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

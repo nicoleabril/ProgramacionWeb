@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Estilos generales */
+:root{
+    --headerHeight:80px;
+    --primaryColor:#003776;
+    --secundaryColor:#004ea7;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: var(--primaryColor);
+    color: #fff;
+    height: var(--headerHeight);
+}
+.menu {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /*TODOS EN UNA LINEA*/
+    position: relative;
+}
+.burger_menu{
+    display: none; /*Ocultar icono*/
+}
+.burger_menu:checked+ul{ /*Si esta seleccionado se despliega el menu*/
+    height: calc(100vh - var(--headerHeight));
+}
+.menu a{
+    text-decoration: none;
+}
+.menu h1{
+    cursor: pointer;
+    transition: font-size 0.5s ease; 
+}
+.menu h1:hover{
+    font-size: 25px; 
+}
+.menu ul,li {
+    list-style: none;
+}
+.menu ul{
+    z-index: 1;
+    background-color: var(--secundaryColor);
+    width: 100%;
+    position: absolute;
+    top:var(--headerHeight);
+    display: flex;
+    height: 0;
+    overflow: hidden;
+    left: 0;
+    padding: 0;
+    margin-right: 8%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    transition:  all 0.5s;
+}
+.menu a{
+    padding-top: 30px;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+main {
+    padding: 20px;
+}
+
+
+
+/* Estilos del formulario */
+input,select{
+    width: 250px;
+    height: 35px;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+
+button {
+    padding: 10px;
+    width: 150px;
+    margin: 20px 0;
+    background-color: var(--primaryColor);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+  
+}
+
+button:hover {
+    background-color: var(--secundaryColor);
+   
+}
+
+
+.eliminar-hijo {
+    margin-right: 5px;
+}
+
+.eliminar-hijo {
+    color: white;
+    font-size: 18px;
+    width: 40px;
+}
+
+
+/* Estilos de las tablas */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--secundaryColor);
+    color: #fff;
+}
+
+/* Estilos del pie de página */
+footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--primaryColor);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .datos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    border: 3px solid var(--secundaryColor);
+    padding: 30px;
+   
+}
+
+.foto{
+    width: 50%;
+    margin: 0;
+    align-items: center;
+}
+.foto input{
+    font-size: 16px;
+    width: 450px;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  
+}
+/* Estilos de la tabla de hijos */
+#hijos {
+    overflow-x: auto; 
+}
+
+#hijos-table {
+    width: 100%; 
+    white-space: nowrap; /* Evita que el contenido de las celdas se divida en varias líneas */
+}
+
+#hijos-table th,
+#hijos-table td {
+    min-width: 100px;
+    padding: 8px; 
+    text-align: left; 
+}
+
+#hijos-table th {
+    background-color: var(--secundaryColor);
+    color: #fff; 
+}
+
+#hijos-table tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+#hijos-table tbody tr:hover {
+    background-color: #e0e0e0; 
+}
+#hijos-table .nombre-hijo::placeholder,
+#hijos-table .edad-hijo::placeholder {
+    opacity: 0;
+}
+@media (max-width: 768px) {
+    /* Estilos para pantallas pequeñas */
+    #hijos-table th,
+    #hijos-table td {
+        display: block;
+        width: auto;
+        text-align: left;
+    }
+    #hijos-table .nombre-hijo::placeholder,
+    #hijos-table .edad-hijo::placeholder {
+        opacity: 1;
+        color: #bcbcbc; 
+    }
+
+}
+
+
+
+@media (min-width: 768px) {
+    .info {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .info > div {
+        width: 45%;
+        padding-left: 20px;
+    }
+}
+
+
+.info > div {
+    width: 45%; 
+    padding-left: 20px;
+   
+}
+
+.info label,
+.info input,
+.info select {
+    display: block;
+    margin-bottom: 5px; 
+    margin-right: 30px;
+}
+
+h2{
+    color: var(--primaryColor);
+    padding:0 20px 20px 0;
+}
+
+input{
+    border-radius: 5px;
+    padding: 2px;
+}
+/* Estilos de la imagen de la foto de perfil */
+#foto-preview {
+    width: 250px;
+    height: 250px;
+    margin: 30px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boton-consultas-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+.hijos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Espacio entre el título y los botones */
+}
+
+
+
+.hijos-header button:hover {
+    background-color: var(--secundaryColor);
+}
+
+
+/*Responsive*/
+@media (min-width:768px){
+    .burger_label{
+        display: none;
+    }
+    .menu ul{
+      
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        gap: 2rem;
+        background-color: var(--primaryColor);
+    }
+    
+    .menu a {
+        text-decoration: none;
+        position: relative;
+        font-size: 1.2rem;
+    }
+    
+    .menu a::after {
+        content: '';
+        position: absolute;
+        bottom: -2px; 
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: white; /* Color de la línea */
+        transition: width 0.3s; /* Animación de la línea */
+    }
+    
+    .menu a:hover::after {
+        width: 100%;
+    }
+    
+}
