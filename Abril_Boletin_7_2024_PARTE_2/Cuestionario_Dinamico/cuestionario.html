@@ -17,8 +17,16 @@
     </form>
     <div id="questionsContainer"></div>
     <button id="submitBtn" style="display: none;" onclick="submitForm()">Aceptar</button>
-    <textarea id="answers" rows="10" cols="50" readonly></textarea>
+    <div id="responseForm" style="display: none;">
+        <h2>Contestar el formulario</h2>
+        <form id="answersForm">
+            <!-- Aquí se generará el formulario dinámicamente -->
+        </form>
+        <button onclick="submitAnswers()">Enviar</button>
+    </div>
 </div>
+
+<textarea id="answers" rows="10" cols="50" readonly style="display: none;"></textarea>
 
 <script src="script.js"></script>
 </body>
