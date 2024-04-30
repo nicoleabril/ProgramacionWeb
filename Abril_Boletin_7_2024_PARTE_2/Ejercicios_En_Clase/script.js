@@ -150,3 +150,95 @@ console.log(parrafo.innerText);
 
 
 //GET ELEMENT BY CLASSNAME
+let paises = document.getElementsByClassName("paises");
+console.log(paises[0].innerHTML);
+console.log(paises[1].innerHTML);
+console.log(paises[2].innerHTML);
+
+
+//GET ELEMENT BY TAGNAME
+let contenedores = document.getElementsByTagName("div");
+console.log(contenedores[0].innerHTML);
+console.log(contenedores[1].innerHTML);
+console.log(contenedores[2].innerHTML);
+
+//MODIFICAR NODOS
+
+//INNER TEXT
+let titulo = document.getElementById("titulo");
+console.log(titulo.innerText);
+titulo.innerText = "Hola, July";
+console.log(titulo.innerText);
+
+//INNER HTML
+let container = document.getElementById("contenedor");
+container.innerHTML = "<h2>Hola Mundo!</h2><p>Lorem ipsum</p>"
+
+
+//CLASS NAME
+container.className = "container row";
+
+//AGREGAR O QUITAR NODOS
+let parrado = document.createElement("p");
+parrado.innerHTML = "<h2>Hola Coder!</h2>";
+document.body.append(parrado);
+
+//REMOVE
+parrado.remove();
+paises[0].remove();
+
+//VALUE
+document.getElementById("nombre").value = "Homero";
+document.getElementById("edad").value = 39;
+
+//PLANTILLAS LITERALES
+let producto = { id: 1, nombre: "Arroz", precio:125};
+let concatenado = "ID: "+producto.id +" - Producto "+ producto.nombre + "$"+producto.precio;
+let plantilla = `ID: ${producto.id} - Producto ${producto.nombre} $ ${producto.precio}`;
+
+console.log(concatenado);
+console.log(plantilla);
+
+let contenedor = document.createElement("div");
+contenedor.innerHTML = `<h3> ID: ${producto.id} </h3>
+                        <p>  Producto: ${producto.nombre}</p>
+                        <b>  $ ${producto.precio}</b>`;
+document.body.appendChild(contenedor);
+
+
+//EVENTOS EN JS
+
+//ONCLICK
+function respuestaClick() {
+    console.log("Respuesta evento, usted ha hecho click");
+}
+let boton = document.getElementById("btnPrincipal");
+boton.addEventListener("click", respuestaClick);
+
+boton.onclick = () => {console.log("Respuesta 2")};
+
+//EVENTOS DEL MOUSE
+boton.onmousemove = () => {console.log("Move")};
+
+//EVENTOS DEL TECLADO
+let input1 = document.getElementById("nombre");
+let input2 = document.getElementById("edad");
+input1.onkeyup = () => {console.log("keyUp")};
+input2.onkeydown = () => {console.log("keyDown")};
+
+//CHANGE
+input1.onchange = () => {console.log("valor1")};
+input2.onchange = () => {console.log("valor2")};
+
+//INPUT
+input1.addEventListener('input', () => {
+    console.log(input1.value);
+});
+
+//SUBMIT
+function validarFormulario(e) {
+    e.preventDefault();
+    console.log("Formulario Enviado :)")
+}
+let miFormulario = document.getElementById("formulario");
+miFormulario.addEventListener("submit", validarFormulario);
