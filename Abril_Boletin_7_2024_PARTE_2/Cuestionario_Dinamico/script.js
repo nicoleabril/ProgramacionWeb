@@ -44,15 +44,20 @@ function addMultipleOptions(questionNum) {
     multipleOptionsDiv.innerHTML = '';
 
     for (var i = 1; i <= numOptions; i++) {
-        multipleOptionsDiv.innerHTML += `
-            <input type="checkbox" id="option${i}_${questionNum}" name="option${i}_${questionNum}" value="option${i}">
-            <label for="option${i}_${questionNum}">Opción ${i}</label>
-            <br>
-        `;
+        var optionLabel = document.createElement('label');
+        optionLabel.textContent = 'Opción ' + i + ': ';
+        var optionInput = document.createElement('input');
+        optionInput.type = 'text';
+        optionInput.id = 'option' + i + '_' + questionNum;
+        optionInput.name = 'option' + i + '_' + questionNum;
+        multipleOptionsDiv.appendChild(optionLabel);
+        multipleOptionsDiv.appendChild(optionInput);
+        multipleOptionsDiv.appendChild(document.createElement('br'));
     }
 
     multipleOptionsDiv.style.display = 'block';
 }
+
 
 function submitForm() {
     var numQuestions = parseInt(document.getElementById('numQuestions').value);
@@ -79,24 +84,30 @@ function submitForm() {
                 <label for="answer${i}_false">Falso</label>
             `;
         } else if (questionType === 'multiplechoice') {
-            var options = '';
             var numOptions = parseInt(document.getElementById('numOptions' + i).value);
             for (var j = 1; j <= numOptions; j++) {
-                if (document.getElementById('option' + j + '_' + i).checked) {
-                    options += document.getElementById('option' + j + '_' + i).value + ', ';
-                }
+                var optionText = document.getElementById('option' + j + '_' + i).value;
+                var optionId = 'option' + j + '_' + i;
+                questionDiv.innerHTML += `
+                    <input type="checkbox" id="${optionId}" name="${optionId}" value="${optionText}">
+                    <label for="${optionId}">${optionText}</label>
+                    <br>
+                `;
             }
-            // Eliminar la coma extra al final
-            options = options.slice(0, -2);
-
-            questionDiv.innerHTML += `<label>${options}</label><br>`;
         }
 
         answersForm.appendChild(questionDiv);
     }
 
+    // Ocultar formulario de configuración
+    document.getElementById('questionForm').style.display = 'none';
+    document.getElementById('submitBtn').style.display = 'none';
+    document.getElementById('questionsContainer').style.display = 'none';
+    // Mostrar solo el formulario de respuestas
     document.getElementById('responseForm').style.display = 'block';
 }
+
+
 
 function submitAnswers() {
     var answers = '';
@@ -104,25 +115,31 @@ function submitAnswers() {
 
     for (var i = 1; i <= numQuestions; i++) {
         var question = document.getElementById('question' + i).value;
+        var questionType = document.getElementById('questionType' + i).value;
         var answer;
 
-        if (document.getElementById('answer' + i)) {
+        if (questionType === 'text') {
             answer = document.getElementById('answer' + i).value;
-        } else {
-            answer = '';
-            var numOptions = parseInt(document.getElementById('numOptions' + i).value);
-            for (var j = 1; j <= numOptions; j++) {
-                if (document.getElementById('option' + j + '_' + i).checked) {
-                    answer += document.getElementById('option' + j + '_' + i).value + ', ';
-                }
+        } else if (questionType === 'truefalse') {
+            var trueOption = document.getElementById('answer' + i + '_true');
+            var falseOption = document.getElementById('answer' + i + '_false');
+            answer = trueOption.checked ? trueOption.value : falseOption.value;
+        } else if (questionType === 'multiplechoice') {
+            var options = document.querySelectorAll('input[name^="option' + i + '"]:checked');
+            console.log(options);
+            if (options.length > 0) {
+                answer = Array.from(options).map(option => option.value).join(', ');
+            } else {
+                answer = 'Ninguna opción seleccionada';
             }
-            // Eliminar la coma extra al final
-            answer = answer.slice(0, -2);
         }
-
         answers += `${question}: ${answer}\n`;
     }
 
-    document.getElementById('answers').value = answers;
-    document.getElementById('answers').style.display = 'block';
+    console.log(answers);
 }
+
+
+
+
+
