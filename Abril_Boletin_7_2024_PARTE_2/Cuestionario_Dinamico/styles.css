@@ -1,19 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 .container {
+   
+    width: 650px;
+    max-width: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid #004f7a;
+    overflow: auto;
+}
+.questionContainer {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#questionsContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+[id^="optionsContainer"] input {
+    margin-right: 5px; 
 }
 
+[id^="optionsContainer"] button {
+    margin-left: 0px;
+    margin-right: 5px; 
+}
+#questionForm input{
+    margin-right: 5px;
+    margin-left: 8px;
+}
+h1{
+    font-weight: bold;
+    color: #004f7a;
+}
 input[type="number"] {
     width: 50px;
+    padding: 8px 20px 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
 }
-
+input{
+    width: 150px;
+    padding: 8px 8px 8px 8px;
+    font-size: 16px;
+}
+select{
+    width: 150px;
+    padding: 8px 8px 8px 8px;
+    font-size: 16px;
+}
 textarea {
     margin-top: 20px;
+    margin-bottom: 10px; 
 }
 
 label {
     display: block;
     margin-bottom: 10px;
+}
+button:hover{
+    background-color: #0c6c9f;
+    cursor: pointer;
+}
+.button1 {
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    width: 120px;
+    font-size: 16px;
+    white-space: nowrap;
+    background-color: #004f7a;
+    color: #fff;
+    border: none;
+}
+
+.button2{
+    text-align: center;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 10px 20px 10px 20px;
+    width: 200px;
+    font-size: 16px;
+    white-space: nowrap;
+    background-color: #004f7a;
+    color: #fff;
+    border: none;
+}
+.button3{
+    text-align: center;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 10px 20px 10px 20px;
+    width: 120px;
+    font-size: 16px;
+    white-space: nowrap;
+    background-color: #004f7a;
+    color: #fff;
+    border: none;
+}
+.buttonAgregar{
+    text-align: center;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 10px 20px 10px 20px;
+    width: 120px;
+    font-size: 16px;
+    white-space: nowrap;
+    background-color: #004f7a;
+    color: #fff;
+    border: none;
+}
+#answersForm {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start; 
+    justify-content: center; 
+    padding: 20px; 
+    border-radius: 5px;
+    margin: 10px;
+    margin-top: -30px;
+    flex-wrap: wrap;
+}
+
+.form-grouplabel{
+    font-weight: 450;
+    text-align: left;
+}
+.text-question{
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+.text-question label{
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+.text-question input{
+    width: 250px;
+}
+.truefalse-question{
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+.truefalse-question .options{
+    display: flex;
+}
+.multiplechoice-question{
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+
+}
+.multiplechoice-question .options{
+    display: flex;
 }
