@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto 1fr;
+    min-height: 100vh;
+}
+
+header {
+    height: 150px;
+}
+
+footer {
+    height: 100px;
+}
+
+nav {
+    padding: 20px;
+    border: 1px solid #a79813;
+    background-color: #ffe600;
+    grid-row: 1 / -1; /* Ocupa desde la primera hasta la última fila */
+    grid-column: 1; /* Empieza en la primera columna */
+    box-sizing: border-box;
+    width: 200px;
+}
+
+header, footer {
+    padding: 20px;
+    border: 1px solid #a79813;
+    background-color: #ffe600;
+    grid-column: 2 / -1; /* Ocupa desde la segunda columna hasta el final */
+    box-sizing: border-box;
+}
+
+#contenido {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto 1fr; /* Primera columna para las secciones, segunda columna para el aside */
+}
+
+section, aside {
+
+    padding: 20px;
+    border: 1px solid #a79813;
+    background-color: #ffe600;
+}
+
+section:nth-child(1) {
+    grid-row: 1; /* Primera sección en la primera fila */
+    grid-column: 1; /* Primera sección en la primera columna */
+}
+
+section:nth-child(2) {
+    grid-row: 2; /* Segunda sección en la segunda fila */
+    grid-column: 1; /* Segunda sección en la primera columna */
+}
+
+section {
+    width: 800px;
+}
+
+aside {
+    width: 235px;
+    grid-row: 1 / span 2; /* El aside ocupa desde la primera fila hasta la segunda fila */
+    grid-column: 2; /* El aside ocupa la segunda columna */
+}
+
+section, aside, nav, header, footer {
+    margin: 10px; /* Agregar un margen de 10px alrededor de cada elemento */
+    padding: 20px;
+    border: 1px solid #a79813;
+    background-color: #ffe600;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
+    }
+    
+    nav {
+        grid-row: auto; /* Restaura el comportamiento normal del nav en pantallas pequeñas */
+        grid-column: 1 / -1; /* Ocupa todas las columnas disponibles */
+    }
+    
+    #contenido {
+        grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
+    }
+}
