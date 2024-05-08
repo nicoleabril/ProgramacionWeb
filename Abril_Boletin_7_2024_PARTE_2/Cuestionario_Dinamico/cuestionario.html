@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Cuestionario Dinámico</h1>
+        <h1 id="titulo" class="titulo">Cuestionario Dinámico</h1>
         <div class="questionContainer">
             <form id="questionForm">
                 <label for="numQuestions">Número de preguntas:</label>
@@ -23,6 +23,10 @@
                 <!-- Aquí se generará el formulario dinámicamente -->
             </form>
             <button class="button3" onclick="submitAnswers()">Enviar</button>
+            
+        </div>
+        <div id="mensaje" class="hidden">
+            <p>¡Gracias por contestar este formulario! 😊</p>
         </div>
     </div>
 <script src="script.js"></script>

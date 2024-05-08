@@ -5,6 +5,9 @@ body{
     margin: 0;
     padding: 0;
 }
+h1, label {
+    font-family: 'Lato', sans-serif;
+  }
 .container {
    
     width: 650px;
@@ -140,6 +143,9 @@ button:hover{
     flex-wrap: wrap;
 }
 
+.form-group {
+    margin-bottom: 20px;
+  }
 .form-grouplabel{
     font-weight: 450;
     text-align: left;
@@ -150,6 +156,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     font-size: 16px;
+    flex-wrap: nowrap;
 }
 .text-question label{
     margin-right: 10px;
@@ -165,6 +172,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     font-size: 16px;
+    flex-wrap: nowrap;
 }
 .truefalse-question .options{
     display: flex;
@@ -175,8 +183,40 @@ button:hover{
     justify-content: center;
     align-items: center;
     font-size: 16px;
+    flex-wrap: nowrap;
 
 }
 .multiplechoice-question .options{
     display: flex;
 }
+.multiplechoice-question > label,.truefalse-question > label,.text-question > label{
+    color: #004f7a;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: block;
+    font-weight: bold;
+  }
+  button, input[type="text"], select {
+    transition: all 0.3s ease;
+  }
+  input[type="text"]:focus, select:focus {
+    outline: none;
+    border-color: #004f7a;
+    box-shadow: 0 0 0 2px rgba(0, 79, 122, 0.2);
+  }
+  input[type="text"], select {
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .hidden {
+    display: none;
+    margin-top: -5vh;
+  }
+  .hidden p{
+    font-size: 2.5rem;
+    color: #004f7a;
+    font-weight: bold;
+  }
+  

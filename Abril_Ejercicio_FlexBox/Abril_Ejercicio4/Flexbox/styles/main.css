@@ -1,0 +1,72 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Asegura que todo el cuerpo y la página ocupen el 100% del alto */
+}
+
+body {
+    display: flex;
+    flex-direction: row; /* Ahora el cuerpo tiene una dirección de fila */
+}
+
+nav {
+    margin: 10px;
+    padding: 20px;
+    flex: 0 0 auto; /* El nav no debe crecer ni encoger */
+    width: 160px; /* Ancho fijo del nav */
+    border: 1px solid #a79813;
+    background-color: #ffe600;
+}
+
+header {
+    height: 150px;
+}
+
+footer {
+    height: 100px;
+}
+
+section {
+    width: 800px;
+}
+
+#contenedorCuerpo {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Ocupa todo el espacio restante horizontalmente */
+}
+
+header, footer {
+    padding: 20px;
+    border: 1px solid #a79813;
+    background-color: #ffe600;
+    margin: 10px;
+}
+
+#contenido {
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+#contenedorSecciones {
+    height: 425px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section, aside {
+    padding: 20px;
+    border: 1px solid #a79813;
+    background-color: #ffe600;
+}
+
+section {
+    flex: 2;
+}
+
+aside {
+    flex: 1;
+    width: 235px;
+}

@@ -191,6 +191,9 @@ function submitAnswers() {
         }
         answers += `${question}: ${answer}\n`;
     }
+    document.getElementById('titulo').style.display = 'none';
+    document.getElementById('responseForm').style.display = 'none';
+    document.getElementById('mensaje').style.display = 'block';
 
     console.log(answers);
 }
