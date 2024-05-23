@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Personas</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        #back-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="menu">
+            <h1>Mantenimiento de Personas</h1>
+            <label class="burger_label" for="burger_menu"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="burger" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+              </svg>
+            </label>
+            <input class="burger_menu" type="checkbox" id="burger_menu">
+            <ul class="links dropdown-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="listado.html">Personas</a></li>
+                <li><a href="#">Contactos</a></li>
+            </ul>            
+        </nav>
+    </header>
+    <main>
+        <h1>Listado de Personas</h1>
+        <button id="back-btn" onclick="window.location.href='index.html'">Regresar</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                </tr>
+            </thead>
+            <tbody id="person-table-body">
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>© 2024 Mantenimiento de Personas. Todos los derechos reservados.</p>
+    </footer>
+    <script src="list.js"></script>
+</body>
+</html>
