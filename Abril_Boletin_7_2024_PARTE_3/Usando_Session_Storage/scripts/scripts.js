@@ -89,14 +89,14 @@ document.addEventListener("DOMContentLoaded", function() {
             foto
         };
     
-        // Obtener el array de personas del localStorage
-        const personas = JSON.parse(localStorage.getItem('personas')) || [];
+        // Obtener el array de personas del SessionStorage
+        const personas = JSON.parse(sessionStorage.getItem('personas')) || [];
     
         // Agregar la nueva persona al array
         personas.push(persona);
     
-        // Guardar el array de personas en el localStorage
-        localStorage.setItem('personas', JSON.stringify(personas));
+        // Guardar el array de personas en el sessionStorage
+        sessionStorage.setItem('personas', JSON.stringify(personas));
     
         // Limpiar el formulario
         document.getElementById('personal-info-form').reset();

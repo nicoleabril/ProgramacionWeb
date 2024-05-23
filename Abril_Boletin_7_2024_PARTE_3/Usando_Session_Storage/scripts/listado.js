@@ -13,18 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Función para cargar personas desde el localStorage
-    const loadPersonsFromLocalStorage = () => {
-        const personasLocalStorage = JSON.parse(localStorage.getItem('personas')) || [];
-        return personasLocalStorage;
+    // Función para cargar personas desde el sessionStorage
+    const loadPersonsFromsessionStorage = () => {
+        const personassessionStorage = JSON.parse(sessionStorage.getItem('personas')) || [];
+        return personassessionStorage;
     };
 
-    // Función para combinar datos del JSON y localStorage
+    // Función para combinar datos del JSON y sessionStorage
     const loadPersons = async () => {
-        const personasLocalStorage = loadPersonsFromLocalStorage();
+        const personassessionStorage = loadPersonsFromsessionStorage();
         const personasJSON = await loadPersonsFromJSON();
         
-        const allPersons = [...personasLocalStorage, ...personasJSON];
+        const allPersons = [...personassessionStorage, ...personasJSON];
 
         // Crear filas de la tabla para cada persona
         allPersons.forEach((persona, index) => {
@@ -84,8 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function editPerson(index) {
-    // Obtener el array de personas del localStorage
-    const personas = JSON.parse(localStorage.getItem('personas')) || [];
+    // Obtener el array de personas del sessionStorage
+    const personas = JSON.parse(sessionStorage.getItem('personas')) || [];
     const persona = personas[index];
 
     // Redirigir a la página de edición con el índice en la URL
@@ -93,14 +93,14 @@ function editPerson(index) {
 }
 
 function deletePerson(index) {
-    // Obtener el array de personas del localStorage
-    const personas = JSON.parse(localStorage.getItem('personas')) || [];
+    // Obtener el array de personas del sessionStorage
+    const personas = JSON.parse(sessionStorage.getItem('personas')) || [];
 
     // Eliminar la persona del array
     personas.splice(index, 1);
 
-    // Guardar el array actualizado en el localStorage
-    localStorage.setItem('personas', JSON.stringify(personas));
+    // Guardar el array actualizado en el sessionStorage
+    sessionStorage.setItem('personas', JSON.stringify(personas));
 
     // Recargar la página para actualizar la tabla
     window.location.reload();

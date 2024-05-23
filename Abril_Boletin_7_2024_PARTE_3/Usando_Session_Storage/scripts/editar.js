@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const personIndex = urlParams.get('index');
 
-    // Obtener el array de personas del localStorage
-    const personas = JSON.parse(localStorage.getItem('personas')) || [];
+    // Obtener el array de personas del sessionStorage
+    const personas = JSON.parse(sessionStorage.getItem('personas')) || [];
     const persona = personas[personIndex];
 
     // Cargar los datos de la persona en el formulario
@@ -82,9 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Guardar el array de personas actualizado en el localStorage
+        // Guardar el array de personas actualizado en el sessionStorage
         personas[personIndex] = persona;
-        localStorage.setItem('personas', JSON.stringify(personas));
+        sessionStorage.setItem('personas', JSON.stringify(personas));
 
         // Redirigir a la página de listado
         window.location.href = 'listado.html';
