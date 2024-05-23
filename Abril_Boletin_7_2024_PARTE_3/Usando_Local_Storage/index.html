@@ -11,9 +11,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts.js" defer></script>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="logo.png" type="image/x-icon">
+    <script src="./scripts/scripts.js" defer></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="./styles/logo.png" type="image/x-icon">
 </head>
 <body>
     <header class="header">
@@ -26,8 +27,7 @@
             <input class="burger_menu" type="checkbox" id="burger_menu">
             <ul class="links dropdown-menu">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="listado.html">Personas</a></li>
-                <li><a href="#">Contactos</a></li>
+                <li><a href="./pages/listado.html">Ver Personas</a></li>
             </ul>            
         </nav>
     </header>
@@ -36,19 +36,23 @@
             <div>
                 <h2>Datos Personales</h2>
                 <div class="boton-consultas-container">
-                    <button class="botonConsultas" type="submit">Consultar</button>
+                    <button class="botonConsultas" type="submit" id="botonAgregar" title="Agregar Persona">
+                        <i class="fas fa-plus"></i>
+                    </button>
                 </div>
             </div>
             <form id="personal-info-form">
                 <div class="datos">
                     <div class="foto">
-                        <label for="foto">Foto:</label>
+                        <label class="botonSubirArchivo" for="foto">Subir Foto</label>
                         <input type="file" id="foto" name="foto" accept="image/*" required>
-                        <img id="foto-preview" src="#" alt="Foto de Perfil">
+                        <div class="preview-container">
+                            <img id="foto-preview" src="#" alt="Foto de Perfil">
+                        </div>
                     </div>
                     <div class="info">
                         <div>
-                            <label for="cedula">Cedula:</label>
+                            <label for="cedula">Cédula:</label>
                             <input type="text" id="cedula" name="cedula" required>
                     
                             <label for="nombre">Nombre:</label>

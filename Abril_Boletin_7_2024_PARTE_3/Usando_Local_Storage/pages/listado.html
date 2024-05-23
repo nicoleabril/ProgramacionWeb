@@ -4,26 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado de Personas</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        table, th, td {
-            border: 1px solid black;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-        #back-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-    </style>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../styles/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../scripts/listado.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -35,20 +19,25 @@
             </label>
             <input class="burger_menu" type="checkbox" id="burger_menu">
             <ul class="links dropdown-menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="listado.html">Personas</a></li>
-                <li><a href="#">Contactos</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="listado.html">Ver Personas</a></li>
             </ul>            
         </nav>
     </header>
     <main>
-        <h1>Listado de Personas</h1>
-        <button id="back-btn" onclick="window.location.href='index.html'">Regresar</button>
+        <h2>Listado de Personas</h2>
+        <button id="back-btn" onclick="window.location.href='../index.html'" title="Regresar"><i class="fas fa-arrow-left"></i></button>
         <table>
             <thead>
                 <tr>
+                    <th>Cédula</th>
                     <th>Nombre</th>
-                    <th>Edad</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Foto</th>
+                    <th>Editar</th>
+                    <th>Borrar</th>
                 </tr>
             </thead>
             <tbody id="person-table-body">
@@ -58,6 +47,5 @@
     <footer>
         <p>© 2024 Mantenimiento de Personas. Todos los derechos reservados.</p>
     </footer>
-    <script src="list.js"></script>
 </body>
 </html>
